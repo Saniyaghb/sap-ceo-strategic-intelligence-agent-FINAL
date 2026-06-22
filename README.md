@@ -47,23 +47,8 @@ The system follows a layered Retrieval-Augmented Generation architecture. Public
 
 ## 5. Data Flow Diagram
 
-```mermaid
-flowchart LR
-    A[Live public sources] --> B[collectors/live_collect.py]
-    B --> C[data/raw/all_sources.csv]
-    C --> D[processing/clean.py]
-    D --> E[data/processed/master_data.csv]
-    E --> F[processing/chunk.py]
-    F --> G[data/processed/chunks.csv]
-    G --> H[rag/vector_store.py]
-    H --> I[ChromaDB vector store]
-    J[User question in Streamlit] --> K[rag/retriever.py]
-    I --> K
-    K --> L[Relevant evidence chunks]
-    L --> M[agents/ceo_agent.py]
-    J --> M
-    M --> N[Ollama phi4-mini response]
-    N --> O[Dashboard output\nCEO briefing, opportunities, risks, recommendations, evidence]
+<img width="889" height="996" alt="DATA FLOW - visual selection" src="https://github.com/user-attachments/assets/3ddf96e0-9b5d-45cf-b70d-435bd6cd3da4" />
+
 ```
 
 ### Data Flow Explanation
