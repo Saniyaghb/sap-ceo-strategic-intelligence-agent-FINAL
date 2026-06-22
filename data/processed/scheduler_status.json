@@ -1,0 +1,9 @@
+{
+  "status": "ready",
+  "reason": "processed data is still fresh",
+  "next_refresh_after_hours": 4,
+  "updated_at": "2026-06-22T12:39:17+00:00",
+  "started_at": "2026-06-22T08:16:13+00:00",
+  "last_success_at": "2026-06-22T08:17:35+00:00",
+  "last_output": "Collected  30 rows from SAP News Center\nCollected  90 rows from Google News - SAP\nCollected  67 rows from Google News - SAP Investor Relations\nCollected  32 rows from Google News - Competitors\nCollected  68 rows from Google News - Enterprise AI Trends\nCollected  90 rows from arXiv - Enterprise AI Research\nCollected  90 rows from arXiv - RAG and AI Agents Research\n\nTotal collected documents: 467\nSaved combined raw data to: C:\\Users\\saniy\\Downloads\\sap_ceo_strategic_intelligence_agent_FINAL\\sap_project_Final\\data\\raw\\all_sources.csv\nPrepared 457 clean documents\nSources: 7\nSaved: C:\\Users\\saniy\\Downloads\\sap_ceo_strategic_intelligence_agent_FINAL\\sap_project_Final\\data\\processed\\master_data.csv\nCreated 1097 chunks from 457 documents\nSaved: C:\\Users\\saniy\\Downloads\\sap_ceo_strategic_intelligence_agent_FINAL\\sap_project_Final\\data\\processed\\chunks.csv\nIndexed batch 1/18\nIndexed batch 2/18\nIndexed batch 3/18\nIndexed batch 4/18\nIndexed batch 5/18\nIndexed batch 6/18\nIndexed batch 7/18\nIndexed batch 8/18\nIndexed batch 9/18\nIndexed batch 10/18\nIndexed batch 11/18\nIndexed batch 12/18\nIndexed batch 13/18\nIndexed batch 14/18\nIndexed batch 15/18\nIndexed batch 16/18\nIndexed batch 17/18\nIndexed batch 18/18\nVector DB ready: 1097 chunks in 'sap_strategic_intelligence'\n\nPipeline completed successfully.\n\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 103/103 [00:00<00:00, 4724.19it/s]\n"
+}
