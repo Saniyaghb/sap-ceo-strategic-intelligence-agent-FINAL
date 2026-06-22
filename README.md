@@ -39,32 +39,7 @@ SAP is suitable for this project because it operates in a fast-changing enterpri
 
 ## 4. System Architecture Diagram
 
-```mermaid
-flowchart TD
-    A[Public Data Sources] --> B[Data Collection Layer]
-
-    A1[SAP News Center RSS] --> A
-    A2[Google News RSS\nSAP, investors, competitors, AI trends] --> A
-    A3[arXiv Research API\nEnterprise AI, RAG, AI agents] --> A
-
-    B[collectors/live_collect.py\nFetch RSS/API data\nExtract title, content, URL, date, source metadata] --> C[Raw Data Storage\ndata/raw/all_sources.csv\nIndividual source CSV files]
-
-    C --> D[Data Cleaning Layer\nprocessing/clean.py\nClean HTML/text\nNormalize columns\nRemove duplicates\nCreate master_data.csv]
-
-    D --> E[Chunking Layer\nprocessing/chunk.py\nSentence-aware chunks\nCreate chunks.csv]
-
-    E --> F[Embedding Layer\nrag/vector_store.py\nall-MiniLM-L6-v2 embeddings]
-
-    F --> G[Vector Database\nChromaDB\nCollection: sap_strategic_intelligence]
-
-    G --> H[Retrieval Layer\nrag/retriever.py\nEmbed user question\nRetrieve relevant evidence chunks]
-
-    I[User strategic question] --> H
-
-    H --> J[AI Reasoning Layer\nagents/ceo_agent.py\nOllama phi4-mini\nCEO briefing generation]
-
-    J --> K[Dashboard Layer\ndashboard/app.py\nStreamlit executive dashboard\nOverview, intelligence, risks, opportunities, sentiment, CEO briefing]
-```
+<img width="721" height="847" alt="System Architecture Diagram - visual selection (1)" src="https://github.com/user-attachments/assets/70d666e6-80ea-48d6-81f9-b999c076dceb" />
 
 ### Architecture Explanation
 
